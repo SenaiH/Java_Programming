@@ -1,0 +1,93 @@
+Map
+
+    interface that does NOT inherit the Collection interface
+
+    Map is still part of the java collection framework
+
+    the main idea of this interface is the key / value format
+
+        Entry: key / pair
+
+        each key is linked to some value
+
+        -> keys must be unique
+        -> values can be duplicate
+
+Syntax:
+
+    Map < keyDatatype, valueDatatype > referenceName = object
+
+    Map<Integer, String> map = new HashMap<>();
+
+Classes that implement the Map interface
+
+    HashMap: order the entries is not guaranteed (random order)
+
+        using hashing algorithm (fast and efficient)
+
+    LinkedHashMap: insertion order of the entries is maintained
+
+    TreeMap:
+        implements SortedMap (interface)
+
+        The entries are sorted in a natural order(based on the keys)
+            -> ascending order, smallest to biggest, lexicographical
+
+        null key is not allowed
+
+    HashTable: the order is not guaranteed (random order)
+        legacy class -> inheriting Dictionary
+        synchronized (thread - safe)
+        both null keys and values not allowed
+
+    ------------------------------------------------------------------------
+
+Methods:
+
+    put(key, value):
+        takes the key and value and stores that entry into the map
+
+        -> if the key already exists the value will be updated(reassigned) because the key must be unique
+
+    get(key):
+        returns the value that is linked to the given key
+
+        -> what if the key does not exist? it returns null
+
+    remove(key)
+        uses the key to determine which entry to remove
+
+    containsKey(key)
+        returns boolean based on if the map has that key defined
+
+    containsValue(value)
+        returns boolean based on if the map has the value defined
+
+    ------------------------------------------------------------------------
+
+Looping through a Map:
+
+    can we use for each loop directly with the map
+        no, it does not implement Iterable
+
+        Map<String, Double> map = new HashMap<>();
+
+        for(type : map) <- just this does not work
+
+    keySet(): returns a Set of keys
+
+        then we can iterate through the keys and use those to read the value
+
+        for(String key : map.keySet()){}
+
+    values(): returns all the values of the map
+
+        for(String value : map.values()){}
+
+    entrySet(): returns all the entries of map
+
+        for(Map.Entry<String, Double> entry : map.entrySet()){}
+
+        methods to access information from the entry:
+            getkey()
+            getValue()
