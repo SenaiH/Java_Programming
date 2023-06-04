@@ -4,6 +4,18 @@ public class ReverseNegativeNumber {
 
     public static void main(String[] args) {
 
+        String num = "-35";
+        String reverse = "";
+
+        for (int i = num.length()-1; i >= 1; i--) {
+
+            char ch = num.charAt(i);
+
+
+            reverse+= ""+ch ;
+        }
+        System.out.println("-"+reverse);
+
     }
 
 }

@@ -3,6 +3,30 @@ package week_3_Java_Coding_Task;
 public class FrequencyOfChars {
     public static void main(String[] args) {
 
+        String str = "AAABBCDD";
+        String result = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            int count =0;
+
+            for (int j = 0; j < str.length(); j++) {
+                char ch1 = str.charAt(i);
+
+                if(ch==ch1){
+                    count++;
+                }
+           if(result.contains(ch + "")){
+               continue;
+           }
+           result+=ch;
+           result+=count;
+
+            }
+
+        }
+        System.out.println(result);
+
     }
 
 }

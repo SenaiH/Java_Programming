@@ -4,9 +4,7 @@ public class Task7_FrequencyOfChars {
     public static void main(String[] args) {
 
         String str = "ghfdrdggfgff";
-        String result = ""; //g4h1f4d2r1
-
-
+        String result = ""; //g4h1f4d2r1     g4h1f4d2r1
 
         for (int j = 0; j < str.length(); j++) {
             char ch = str.charAt(j);
@@ -22,7 +20,7 @@ public class Task7_FrequencyOfChars {
             }
 
             if(result.contains(""+ch)){
-                continue;
+               continue;
             }
 
             result += ch;
@@ -30,7 +28,6 @@ public class Task7_FrequencyOfChars {
         }
         System.out.println(result);
     }
-
 }
 /*
 Write a program that can find the frequency of the characters from a string
