@@ -11,19 +11,19 @@ public class FrequencyOfChars {
             int count =0;
 
             for (int j = 0; j < str.length(); j++) {
-                char ch1 = str.charAt(i);
+                char ch1 = str.charAt(j);
 
                 if(ch==ch1){
                     count++;
                 }
-           if(result.contains(ch + "")){
-               continue;
+
            }
-           result+=ch;
-           result+=count;
+            if(result.contains(ch + "")){
+                continue;
 
             }
-
+            result+=ch;
+            result+=count;
         }
         System.out.println(result);
 
