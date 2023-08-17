@@ -7,6 +7,7 @@ public class Unique {
         String input = "AAABBBCCCDEF";
 
         for (int i = 0; i < input.length(); i++) {
+
             int unique = 0;
 
             for (int j = 0; j < input.length(); j++) {
@@ -21,8 +22,6 @@ public class Unique {
     }
 
 }
-
-
 
 /*
 String - Find the unique
